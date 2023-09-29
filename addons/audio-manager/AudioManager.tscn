@@ -1,12 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://b2yrjlexgqqvi"]
 
-[ext_resource path="res://addons/audio-manager/AudioManager.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://addons/audio-manager/AudioManager.gd" id="1"]
 
 [node name="AudioManager" type="Node"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="Music" type="Node" parent="."]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music"]
 
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Music"]
+
 [node name="Effects" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Effects"]

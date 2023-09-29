@@ -1,0 +1,6 @@
+res://default_env.tres
+res://addons/audio-manager/AudioManager.tscn
+res://addons/audio-manager/AudioManager.gd
+res://Test.tscn
+res://Test.gd
+res://README.md

@@ -1,0 +1,17 @@
+2a60927148abd1d33b818b535e306557
+::res://::1695955455
+default_env.tres::Environment::7166062238039021493::1695955455::0::1::::<><>::
+icon.png::CompressedTexture2D::294068413101022913::1646700831::1695944436::1::::<><>::
+README.md::TextFile::-1::1646707833::0::1::::<><>::
+Test.gd::GDScript::-1::1695955286::0::1::::<>Control<>::
+Test.tscn::PackedScene::2212421602252651738::1695955455::0::1::::<><>::uid://b2yrjlexgqqvi<>uid://bs8fbftdck2td<>uid://ccmupohwcl5sk<>uid://c320befvs3dv6<>uid://be675mwn37g0w<>uid://ddfkjh0bhuvw6<>res://Test.gd
+::res://addons/::1695955453
+::res://addons/audio-manager/::1695955455
+AudioManager.gd::GDScript::-1::1695955108::0::1::::<>Node<>::
+AudioManager.tscn::PackedScene::4332113374029334098::1695955455::0::1::::<><>::res://addons/audio-manager/AudioManager.gd
+::res://assets/::1695955499
+cool.wav::AudioStreamWAV::3718249997926832261::1695953343::1695954496::1::::<><>::
+crash.wav::AudioStreamWAV::6795387118020514645::1695955499::1695955499::1::::<><>::
+ding.wav::AudioStreamWAV::2733168951101999712::1695945500::1695945500::1::::<><>::
+laser.wav::AudioStreamWAV::7380774119175670223::1695955369::1695955453::1::::<><>::
+sad.wav::AudioStreamWAV::4939233461618139486::1695953922::1695954336::1::::<><>::

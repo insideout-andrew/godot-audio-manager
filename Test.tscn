@@ -1,101 +1,73 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://6ryi4gwxr36u"]
 
-[ext_resource path="res://assets/back_style_1_001.wav" type="AudioStream" id=1]
-[ext_resource path="res://addons/audio-manager/AudioManager.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/back_style_1_003.wav" type="AudioStream" id=3]
-[ext_resource path="res://assets/back_style_1_002.wav" type="AudioStream" id=4]
-[ext_resource path="res://assets/Sweet Treats.wav" type="AudioStream" id=5]
-[ext_resource path="res://assets/Beach House.wav" type="AudioStream" id=6]
-[ext_resource path="res://Test.gd" type="Script" id=8]
+[ext_resource type="PackedScene" uid="uid://b2yrjlexgqqvi" path="res://addons/audio-manager/AudioManager.tscn" id="2"]
+[ext_resource type="AudioStream" uid="uid://bs8fbftdck2td" path="res://assets/cool.wav" id="3_1bp00"]
+[ext_resource type="AudioStream" uid="uid://ccmupohwcl5sk" path="res://assets/sad.wav" id="4_syjdd"]
+[ext_resource type="AudioStream" uid="uid://c320befvs3dv6" path="res://assets/crash.wav" id="5_loi1e"]
+[ext_resource type="AudioStream" uid="uid://be675mwn37g0w" path="res://assets/ding.wav" id="6_h7nn0"]
+[ext_resource type="AudioStream" uid="uid://ddfkjh0bhuvw6" path="res://assets/laser.wav" id="7_yct0s"]
+[ext_resource type="Script" path="res://Test.gd" id="8"]
 
 [node name="Test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8")
 
-[node name="AudioManager" parent="." instance=ExtResource( 2 )]
-music = [ ExtResource( 5 ), ExtResource( 6 ) ]
-effects = [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ]
+[node name="AudioManager" parent="." instance=ExtResource("2")]
+music = Array[Resource]([ExtResource("3_1bp00"), ExtResource("4_syjdd")])
+effects = Array[Resource]([ExtResource("5_loi1e"), ExtResource("6_h7nn0"), ExtResource("7_yct0s")])
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
-margin_left = 425.0
-margin_top = 254.0
-margin_right = 598.0
-margin_bottom = 346.0
+layout_mode = 2
+alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
-margin_right = 92.0
-margin_bottom = 92.0
+layout_mode = 2
 
 [node name="PlayMusic" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
-margin_right = 92.0
-margin_bottom = 20.0
-text = "Play Music"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "audio_manager.play_music(\"cool\")"
+flat = true
 
 [node name="PlayMusic2" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
-margin_top = 24.0
-margin_right = 92.0
-margin_bottom = 44.0
-text = "Play Music "
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PauseMusic" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
-margin_top = 48.0
-margin_right = 92.0
-margin_bottom = 68.0
-text = "Pause Music"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "audio_manager.play_music(\"sad\")"
+flat = true
 
 [node name="StopMusic" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer"]
-margin_top = 72.0
-margin_right = 92.0
-margin_bottom = 92.0
-text = "Stop Music"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "audio_manager.stop_music()"
+flat = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer"]
-margin_left = 96.0
-margin_right = 173.0
-margin_bottom = 92.0
+layout_mode = 2
 
 [node name="PlayEffect" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
-margin_right = 77.0
-margin_bottom = 20.0
-text = "Play Effect"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "audio_manager.play_fx(\"crash\")"
+flat = true
 
 [node name="PlayEffect2" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 24.0
-margin_right = 77.0
-margin_bottom = 44.0
-text = "Play Effect"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "audio_manager.play_fx(\"ding\")"
+flat = true
 
 [node name="PlayEffect3" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2"]
-margin_top = 48.0
-margin_right = 77.0
-margin_bottom = 68.0
-text = "Play Effect"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "audio_manager.play_fx(\"laser\")"
+flat = true
